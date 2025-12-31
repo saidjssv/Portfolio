@@ -1,167 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/410cd40949.js" crossorigin="anonymous"></script>
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/socials.css" />
+    <link rel="stylesheet" href="css/nav.css" />
   </head>
   <body>
+    <!-- Contenedor para la barra de navegación dinámica -->
     <div id="navbar"></div>
+
+    <!-- Cursor -->
+     <div class="cursor"></div>
+
+    <!-- Contenido principal -->
+    <main>
+      <!-- Espacio para el contenido principal -->
+      <section id="top">
+        <h1>Hi! I'm Said</h1>
+        <p>Here, I want to tell you about myself, my future/current projects, skills, etc.</p>
+        <img src="imgs/desk.png" alt="desk">
+      </section>
+    </main>
+
+    <!-- Scripts -->
     <script>
+      /**
+       * Carga dinámicamente la barra de navegación
+       */
       fetch("nav.html")
-        .then((res) => res.text())
+        .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
-        });
+          document.dispatchEvent(new Event("nav:loaded"));
+        })
+        .catch((error) => console.error("Error cargando nav.html:", error));
     </script>
-
-    <section id="top">
-      <div class="container">
-        <h1>Hi! I'm Said</h1>
-        <p>
-          Welcome to my portfolio!! Explore my projects and learn more about me.
-        </p>
-      </div>
-    </section>
-
-    <div class="about">
-      <section id="about">
-        <h1>Who am I?</h1>
-        <p>
-          I'm a passionate web developer focused on front-end technologies, I
-          love making beautiful and functional minimalistic and modern websites
-          and maybe applications.
-        </p>
-      </section>
-    </div>
-
-    <div class="Skills">
-      <section>
-        <h1>What skills do I have?</h1>
-        <p>
-          I have some me experience with HTML, CSS and JavaScript, currently
-          learning Front-end.
-        </p>
-      </section>
-    </div>
-
-    <div class="start">
-      <section>
-        <h1>How did I start?</h1>
-        <p>
-          I started my programming journey in 2022, I made my first project in
-          JavaScript who was a discord bot multi-functional (currently
-          discontinued), then I started learning some about Java, I tried to
-          make a game in Unity but, I didn't have the patience for it, so I
-          started learning web development, I loved it. This is my first serious
-          web, I hope you like it!
-        </p>
-      </section>
-    </div>
-
-    <div>
-      <section id="projects">
-      <div class="header">
-        <h1>Projects</h1>
-      </div>
-      <section class="nebulosity">
-        <div class="img">
-          <img src="imgs/image.png" alt="nebulosity" />
-        </div>
-        <div class="card-info">
-          <h1>Nebulosity (discontinued)</h1>
-          <p>
-            This was my first project, a multi-functional discord bot, I started
-            making it in 2022 and his first name was "WhiteBot", then one of my
-            friends suggested rename it to "Nebulosity", I made a lot of
-            features like: moderation, fun commands, dynamic commands, and
-            more. It was a great experience because I learned how hard is to
-            make a programming project. The number of users was around 60k in
-            like +50 servers. It was discontinued because I didn't have a host
-            for it and I didn't have the resources to keep it online. I started
-            love programming since this project.
-          </p>
-        </div>
-      </section>
-    </section>
-    </div>
-
-    <div>
-      <section id="socials">
-      <div class="socialHeader">
-        <h1>Socials</h1>
-      </div>
-
-      <div class="instagram" onclick="window.open('https://www.instagram.com/saidomg_', '_blank')">
-        <section class="instagramSection">
-          <img class="instagramImg" src="imgs/instagram.png" alt="instagram" />
-          <p>Instagram</p>
-        </section>
-      </div>
-
-      <div class="discord" onclick="window.open('https://discord.gg/nR8EeavR', '_blank')">
-        <section class="discordSection">
-          <img class="discordImg" src="imgs/discord.png" alt="discord" />
-          <p>Discord</p>
-        </section>
-      </div>      
-    </section>
-    </div>
-
-    <div class="footer">
-      <section>
-        <p>© 2025 Said. All rights reserved.</p>
-      </section>
-      </div>
-
-    <br><br><br><br><br><br><br><br><br><br>
-
-    <script src="script.js"></script>
-    <script>
-      // 💡 Initial position
-      let targetX = window.innerWidth / 2;
-      let targetY = window.scrollY + window.innerHeight / 2;
-      let currentX = targetX;
-      let currentY = targetY;
-
-      // 💫 As the mouse moves, update the target
-      document.addEventListener("mousemove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY + window.scrollY; // Adjust Y for scroll
-      });
-
-      // 🎥 Smooth animation and smooth movement
-      function animateGlow() {
-        // Smooth interpolation
-        currentX += (targetX - currentX) * 0.2;
-        currentY += (targetY - currentY) * 0.2;
-
-        document.body.style.background = `
-    radial-gradient(circle at ${currentX}px ${currentY}px, rgba(76, 240, 255, 0.4), transparent 100%),
-    #000a1f
-  `;
-
-        requestAnimationFrame(animateGlow);
-      }
-      animateGlow();
-
-      // ✨ Create glows with smooth animation
-      const sparkleCount = 200;
-
-      for (let i = 0; i < sparkleCount; i++) {
-        const sparkle = document.createElement("span");
-        sparkle.classList.add("sparkle");
-        sparkle.style.top = `${Math.random() * document.body.scrollHeight}px`;
-        sparkle.style.left = `${Math.random() * 99}vw`;
-
-        // Longest duration
-        sparkle.style.animationDuration = `${5 + Math.random() * 3}s`; // between 5 y 10 seconds
-        document.body.appendChild(sparkle);
-      }
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

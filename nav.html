@@ -1,7 +1,44 @@
-<link rel="stylesheet" href="css/nav.css" />
-<nav id="mainNav">
-  <a href="#top">Inicio</a>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#socials">Socials</a>
-</nav>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+  <title>Navigation</title>
+</head>
+
+<body>
+
+
+  <link rel="stylesheet" href="css/nav.css" />
+  <nav id="mainNav">
+    <a href="#top"><span class="material-symbols-outlined">home</span>Inicio</a>
+    <a href="#about"><span class="material-symbols-outlined">info</span>About</a>
+    <a href="#projects"><span class="material-symbols-outlined">work</span>Projects</a>
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">
+        <span class="material-symbols-outlined">share</span>
+        Socials
+        <span class="material-symbols-outlined arrow">expand_less</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+          Instagram
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-discord"></i>
+          Discord
+        </a>
+      </div>
+    </div>
+  </nav>
+
+</body>
+
+</html>
+
+<!-- <span class="material-symbols-outlined">share</span>-->
