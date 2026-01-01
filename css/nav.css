@@ -125,7 +125,7 @@ nav a.active {
 .dropdown-content {
   display: none;
   position: absolute;
-  bottom: calc(100% + 0.5em);
+  bottom: calc(100% + 1em);
   right: 0;
   min-width: 210px;
   background-color: rgba(61, 0, 63, 0.459);
@@ -176,10 +176,8 @@ nav a.active {
 @media (max-width: 700px) {
   nav {
     width: 90vw;
-    min-width: unset;
     max-width: unset;
     padding: 0.5em 2vw;
-    top: 1vw;
     gap: 0.3em;
   }
 

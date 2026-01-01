@@ -1,6 +1,121 @@
+/* Estilos para el top de la pagina */
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  gap: 20px;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.top-section h1 {
+  font-size: 120px;
+  color: rgb(129, 0, 119);
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Ephesis", cursive;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.top-section p {
+  font-size: 40px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+  flex: 0 1 500px;
+}
+
+.top-section img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(129, 0, 119, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-section img:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 12px 30px rgba(129, 0, 119, 0.3);
+}
+.top-section a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: visible;
+}
+
+.top-section a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(129, 0, 119);
+  transition: width 0.4s ease;
+}
+
+.top-section a:hover::after {
+  width: 100%;
+}
+
+.top-section i {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, margin 0.3s ease;
+}
+
+.top-section a:hover {
+  color: rgb(129, 0, 119);
+}
+
+.top-section a:hover i {
+  opacity: 1;
+  transform: translateX(0);
+  margin-left: 10px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .top-section h1 {
+    font-size: 48px;
+  }
+
+  .content-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .top-section p {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .top-section img {
+    width: 250px;
+    height: 250px;
+  }
 }
