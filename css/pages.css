@@ -3,7 +3,6 @@
 /* Estilos base para secciones */
 section {
   padding: 80px 40px;
-  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
