@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    <script src="https://kit.fontawesome.com/410cd40949.js" crossorigin="anonymous"></script>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../css/background.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Happy+Monkey&display=swap" rel="stylesheet">
+</head>
+<body id="about-page">
+    <!-- Contenedor de la barra de navegación -->
+    <div id="navbar"></div>
+    
+    <!-- Contenido principal -->
+    <main id="main-content">
+        <section id="about">
+            <h1>About Me</h1>
+            <!-- Aquí irá el contenido sobre ti -->
+        </section>
+    </main>
+
+    <!-- Script para cargar la navegación -->
+    <script>
+      /**
+       * Carga dinámicamente la barra de navegación
+       */
+      fetch("nav.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+          document.dispatchEvent(new Event("nav:loaded"));
+        })
+        .catch((error) => console.error("Error cargando nav.html:", error));
+    </script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

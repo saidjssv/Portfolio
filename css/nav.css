@@ -172,26 +172,127 @@ nav a.active {
   padding-left: 1.8em;
 }
 
-/* Responsive: tablets */
-@media (max-width: 700px) {
+/* Responsive: Tablets grandes */
+@media (max-width: 1024px) {
   nav {
-    width: 90vw;
-    max-width: unset;
-    padding: 0.5em 2vw;
-    gap: 0.3em;
+    width: 70vw;
+    padding: 0.6em 2vw;
   }
 
   nav a {
-    padding: 0.4em 1em;
-    margin: 0.2em 0;
-    font-size: 0.95em;
+    padding: 0.6em 1.5em;
+    margin: 0.4em;
+  }
+
+  .dropdown-btn {
+    padding: 0.6em 1.5em;
   }
 }
 
-/* Responsive: móviles */
-@media (max-width: 400px) {
+/* Responsive: Tablets */
+@media (max-width: 768px) {
   nav {
-    width: 98vw;
-    padding: 0.5em 1vw;
+    width: 85vw;
+    padding: 0.5em 1.5vw;
+    gap: 0.3em;
+    bottom: 1.5vw;
+  }
+
+  nav a {
+    padding: 0.5em 1.2em;
+    margin: 0.3em;
+    font-size: 0.9em;
+  }
+
+  nav span {
+    font-size: 1.1em;
+    margin-right: 0.2em;
+  }
+
+  .dropdown-btn {
+    padding: 0.5em 1.2em;
+    margin: 0.3em;
+    font-size: 0.9em;
+  }
+
+  .dropdown-content {
+    min-width: 180px;
+    font-size: 0.9em;
+  }
+}
+
+/* Responsive: Móviles */
+@media (max-width: 480px) {
+  nav {
+    width: 92vw;
+    padding: 0.4em 1vw;
+    gap: 0.2em;
+    bottom: 1vw;
+    min-width: unset;
+  }
+
+  nav a {
+    padding: 0.4em 0.8em;
+    margin: 0.2em;
+    font-size: 0.85em;
+  }
+
+  nav span {
+    font-size: 1em;
+    margin-right: 0.15em;
+  }
+
+  .dropdown-btn {
+    padding: 0.4em 0.8em;
+    margin: 0.2em;
+    font-size: 0.85em;
+  }
+
+  .dropdown-btn .arrow {
+    font-size: 1em;
+  }
+
+  .dropdown-content {
+    min-width: 160px;
+    right: auto;
+    left: 0;
+  }
+
+  .dropdown-content a {
+    padding: 0.6em 1em;
+    font-size: 0.85em;
+  }
+}
+
+/* Responsive: Móviles pequeños */
+@media (max-width: 360px) {
+  nav {
+    width: 95vw;
+    padding: 0.4em 0.5vw;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav a {
+    padding: 0.4em 0.6em;
+    margin: 0.1em;
+    font-size: 0.8em;
+  }
+
+  nav a span {
+    display: none;
+  }
+
+  nav a::after {
+    content: attr(data-label);
+  }
+
+  .dropdown-btn {
+    padding: 0.4em 0.6em;
+    font-size: 0.8em;
+  }
+
+  .dropdown-btn span:not(.arrow) {
+    display: none;
   }
 }

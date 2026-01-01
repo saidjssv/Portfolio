@@ -1,0 +1,121 @@
+/* Estilos responsivos para páginas About y Projects */
+
+/* Estilos base para secciones */
+section {
+  padding: 80px 40px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1 {
+  font-size: 64px;
+  color: rgb(129, 0, 119);
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Ephesis", cursive;
+}
+
+section h2 {
+  font-size: 36px;
+  color: rgb(161, 0, 148);
+  margin: 20px 0;
+  text-align: center;
+}
+
+section p {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Responsive - Tablets grandes */
+@media (max-width: 1024px) {
+  section {
+    padding: 60px 30px;
+  }
+
+  section h1 {
+    font-size: 56px;
+  }
+
+  section h2 {
+    font-size: 32px;
+  }
+
+  section p {
+    font-size: 18px;
+    max-width: 700px;
+  }
+}
+
+/* Responsive - Tablets */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 25px;
+    min-height: 50vh;
+  }
+
+  section h1 {
+    font-size: 48px;
+    margin-bottom: 25px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+
+  section p {
+    font-size: 17px;
+    max-width: 600px;
+  }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 480px) {
+  section {
+    padding: 40px 20px;
+    min-height: 40vh;
+  }
+
+  section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  section p {
+    font-size: 16px;
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+/* Responsive - Móviles pequeños */
+@media (max-width: 360px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  section h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  section h2 {
+    font-size: 22px;
+  }
+
+  section p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,182 @@
+/* Utilidades Responsivas Globales */
+
+/* Contenedores responsivos */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+/* Utilidades de visibilidad */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+/* Espaciado responsivo */
+.spacing-lg {
+  padding: 60px 0;
+}
+
+.spacing-md {
+  padding: 40px 0;
+}
+
+.spacing-sm {
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .spacing-lg {
+    padding: 40px 0;
+  }
+  
+  .spacing-md {
+    padding: 25px 0;
+  }
+  
+  .spacing-sm {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .spacing-lg {
+    padding: 30px 0;
+  }
+  
+  .spacing-md {
+    padding: 20px 0;
+  }
+  
+  .spacing-sm {
+    padding: 10px 0;
+  }
+}
+
+/* Grids responsivos */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid {
+    gap: 10px;
+  }
+}
+
+/* Tipografía responsiva */
+.text-responsive {
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.title-responsive {
+  font-size: clamp(32px, 5vw, 64px);
+}
+
+.subtitle-responsive {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+/* Botones responsivos */
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Evitar desbordamiento de contenido */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Mejoras de touch en móviles */
+@media (hover: none) and (pointer: coarse) {
+  a, button {
+    -webkit-tap-highlight-color: rgba(161, 0, 148, 0.3);
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

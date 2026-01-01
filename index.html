@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Happy+Monkey&display=swap" rel="stylesheet">
 
   </head>
-  <body>
+  <body id="index-page">
     <!-- Contenedor para la barra de navegación dinámica -->
     <div id="navbar"></div>
 
@@ -23,7 +23,7 @@
      <div class="cursor"></div>
 
     <!-- Contenido principal -->
-    <main>
+    <main id="main-content">
       <!-- Espacio para el contenido principal -->
       <section id="top" class="top-section">
         <h1>Hi! I'm Said</h1>
@@ -31,16 +31,17 @@
           <p>Here, I want to tell you about myself, my future/current projects, skills, etc.</p>
           <img src="imgs/icon.webp" alt="icon">
         </div>
-        <a href="about.html">Want to know about me?<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="html/about.html">Want to know about me?<i class="fa-solid fa-arrow-right"></i></a>
       </section>
     </main>
 
     <!-- Scripts -->
+     <!-- Barra de navegación -->
     <script>
       /**
        * Carga dinámicamente la barra de navegación
        */
-      fetch("nav.html")
+      fetch("html/nav.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
