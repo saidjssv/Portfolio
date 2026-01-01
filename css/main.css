@@ -32,11 +32,12 @@
 
 .top-section p {
   font-size: 40px;
-  color: #666;
+  color: #fffdfdb6;
   line-height: 1.6;
   margin: 0;
   font-weight: 500;
   flex: 0 1 500px;
+  font-family: "Happy Monkey", system-ui;
 }
 
 .top-section img {
