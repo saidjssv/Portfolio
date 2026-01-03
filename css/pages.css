@@ -1,6 +1,8 @@
 /* Estilos responsivos para páginas About y Projects */
 
 /* Estilos base para secciones */
+
+
 section {
   padding: 80px 40px;
   display: flex;
@@ -10,13 +12,18 @@ section {
 }
 
 section h1 {
-  font-size: 64px;
-  color: rgb(129, 0, 119);
+  font-size: 98px;
+  background: linear-gradient(90deg,rgb(6, 0, 116) 0%, rgb(35, 4, 77) 0%, rgba(121, 9, 106, 1) 44%, rgba(89, 0, 140, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 30px;
   text-align: center;
   font-weight: 700;
-  font-family: "Ephesis", cursive;
+  font-family: "Poppins", serif;
 }
+
+/*
 
 section h2 {
   font-size: 36px;
@@ -33,7 +40,7 @@ section p {
   text-align: center;
   margin: 15px 0;
 }
-
+*/
 /* Responsive - Tablets grandes */
 @media (max-width: 1024px) {
   section {

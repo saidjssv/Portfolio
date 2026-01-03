@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,37 +10,52 @@
     <link rel="stylesheet" href="../css/background.css" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/about.css" />
     <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Happy+Monkey&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins&family=Happy+Monkey&display=swap"
+        rel="stylesheet">
 </head>
+
 <body id="about-page">
     <!-- Contenedor de la barra de navegación -->
     <div id="navbar"></div>
-    
+
     <!-- Contenido principal -->
     <main id="main-content">
         <section id="about">
             <h1>About Me</h1>
             <!-- Aquí irá el contenido sobre mi -->
+            <!-- El nombre de nebulosity será un hipervinculo que podra llevar al usuario hacia la tarjeta del mismo y tal vez lo de la OMI idk-->
+            <p>Hi, I'm Said.
+                I'm from Mexico and have a passion for technology and programming. <br><br>
+                I started programming when I was 13, mostly out of curiosity and a need to understand how things work. <br><br>
+                My first real project was a Discord bot called Nebulosity, built with JavaScript, where I learned by
+                breaking things and fixing them again. <br><br>
+                Later, I represented my school at the Mexican Informatics Olympiad (OMI), where I was introduced to C++
+                and strengthened my problem-solving logic and algorithmic thinking. <br><br>
+                Currently, I'm 17 years old andfocused on web development while exploring cybersecurity fundamentals. I enjoy learning
+                by building, refactoring, and questioning how systems behave under the hood.
+            </p>
         </section>
     </main>
 
     <!-- Script para cargar la navegación -->
     <script>
-      /**
-       * Carga dinámicamente la barra de navegación
-       */
-      fetch("nav.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navbar").innerHTML = data;
-          document.dispatchEvent(new Event("nav:loaded"));
-        })
-        .catch((error) => console.error("Error cargando nav.html:", error));
+        /**
+         * Carga dinámicamente la barra de navegación
+         */
+        fetch("nav.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("navbar").innerHTML = data;
+                document.dispatchEvent(new Event("nav:loaded"));
+            })
+            .catch((error) => console.error("Error cargando nav.html:", error));
     </script>
     <script src="../js/script.js"></script>
 
 </body>
+
 </html>

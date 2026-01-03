@@ -1,0 +1,12 @@
+#about p {
+    background: rgba(70, 70, 70, 0.479);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 25px;
+    display: block;
+    border-radius: 30px;
+    max-width: 1000px;
+    font-size: 23px;
+    font-family: "Poppins", serif;
+    line-height: 1.5;
+}
